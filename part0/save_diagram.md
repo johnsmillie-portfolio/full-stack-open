@@ -27,11 +27,11 @@ sequenceDiagram
     server-->>browser: the JavaScript file
     deactivate server
 
-    Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server
+    Note right of browser: Execute the JavaScript code from the server in the browser. This will fetch the list of notes from data.json.
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
-    server-->>browser: [{ "content": "HTML is easy", "date": "2023-1-1" }, ... ]
+    server-->>browser: [{ "content": "Hello, World!", "date": "2025-5-3" }, ... ]
     deactivate server
 
     Note right of browser: The browser executes the callback function that renders the notes
