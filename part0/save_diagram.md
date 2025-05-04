@@ -1,8 +1,16 @@
 ```mermaid
 
 sequenceDiagram
+    participant user
     participant browser
     participant server
+
+    user->>browser: Enter text and Submit
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    activate server
+    Note right of server: create note obj and push
+    server-->>browser: 302 URL redirect: /notes
+    deactivate server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
@@ -27,14 +35,6 @@ sequenceDiagram
     deactivate server
 
     Note right of browser: The browser executes the callback function that renders the notes
-    
+    browser->>user: page render wit list of notes
 ```
 
-
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
