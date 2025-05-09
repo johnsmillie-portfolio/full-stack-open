@@ -1,9 +1,9 @@
 
-const Header = (props) => {
- console.log(props.course.name)
+const Header = ({name}) => {
+ console.log(name)
   return (
     <div>
-      <h1>{props.course.name}</h1>
+      <h1>{name}</h1>
     </div>
   )
 }

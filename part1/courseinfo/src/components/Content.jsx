@@ -1,8 +1,8 @@
 
 
-const Content = (props) => {
+const Content = ({parts}) => {
   
-  const contents = props.course.parts;
+  const contents = parts;
 
   return (
     <>
