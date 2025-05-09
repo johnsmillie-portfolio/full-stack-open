@@ -1,7 +1,7 @@
 
 
 const Total = (props) => {
-  const contents = props.contents;
+  const contents = props.course.parts;
 
   return (
     <p>
