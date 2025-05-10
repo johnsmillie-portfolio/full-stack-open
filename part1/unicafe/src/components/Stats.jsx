@@ -2,8 +2,8 @@ import StatLine from "./StatLine";
 
 const Stats = ({good, neut, bad}) => {
   const all = good + neut + bad;
-  const avg = ((good - bad)/all).toFixed(3);
-  const pos = ((good/all)*100).toFixed(3);
+  const avg = ((good - bad)/all).toFixed(1);
+  const pos = ((good/all)*100).toFixed(1);
   if(all > 0){
   return (
     <>
