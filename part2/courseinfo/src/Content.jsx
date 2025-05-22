@@ -2,12 +2,13 @@ import { Part } from "./Part"
 
 
 const Content = ({parts}) => {
-  let total = 0;
+  const total = parts.reduce((s,p) => {
+    return s + p.exercises;
+  },0)
   return (
     <div>
       {
         parts.map(el => {
-          total += el.exercises;
           return (
            <Part key={el.id} part={el} />
           )}
